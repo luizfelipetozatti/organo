@@ -23,6 +23,9 @@ const FormContainer = () => {
         <InputText label="Cargo" placeholder="Digite seu cargo"/>
         <InputText label="Imagem" placeholder="Digite o endereço da imagem"/>
         <SuspendedList label="Time" itens={times} />
+        <Button>
+          Criar card
+        </Button>
       </form>
     </section>
   )
