@@ -53,7 +53,7 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <FormContainer onInsert={employee => onInsertEmployee(employee)} />
+      <FormContainer times={times.map(time => time.name)} onInsert={employee => onInsertEmployee(employee)} />
 
       {times.map(time => <Team key={time.name} nome={time.name} priColor = {time.priColor} secColor = {time.secColor}/>)}      
       
