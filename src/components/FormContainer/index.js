@@ -4,7 +4,7 @@ import InputText from '../InputText';
 import SuspendedList from '../SuspendedList';
 import './FormContainer.css'
 
-const FormContainer = () => {
+const FormContainer = (props) => {
 
   const times = [
     'Programação',
@@ -16,8 +16,6 @@ const FormContainer = () => {
     'Inovação e Gestão',    
   ]
 
-  // let value = 'DSDS'
-
   const [nome, setNome] =  useState('')
   const [cargo, setCargo] =  useState('')
   const [imagem, setImagem] =  useState('')
@@ -25,7 +23,12 @@ const FormContainer = () => {
 
   const onSave = (event) => {
     event.preventDefault()
-    console.log("form submetido => ", nome, cargo, imagem, time)
+    props.onInsert({
+      nome,
+      cargo,
+      imagem,
+      time
+    })
   }
 
   return (
