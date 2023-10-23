@@ -5,6 +5,7 @@ const SuspendedList = (props) => {
     <div className='suspended-list'>
       <label>{props.label}</label>
       <select onChange={event => props.onChange(event.target.value)} value={props.value} required={props.required}>
+        <option key={""} value=""></option>
           {props.itens.map(item => <option key={item}>{item}</option>)}
       </select>
     </div>
