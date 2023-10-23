@@ -55,7 +55,13 @@ function App() {
       <Banner />
       <FormContainer times={times.map(time => time.name)} onInsert={employee => onInsertEmployee(employee)} />
 
-      {times.map(time => <Team key={time.name} nome={time.name} priColor = {time.priColor} secColor = {time.secColor}/>)}      
+      {times.map(time => <Team 
+        key={time.name} 
+        nome={time.name} 
+        priColor = {time.priColor} 
+        secColor = {time.secColor}
+        employees = {employees.filter(employee => employee.time === time.name)}
+      />)}      
       
     </div>
   );

@@ -19,6 +19,10 @@ const FormContainer = (props) => {
       imagem,
       time
     })
+    setNome('')
+    setCargo('')
+    setImagem('')
+    setCargo('')
   }
 
   return (
